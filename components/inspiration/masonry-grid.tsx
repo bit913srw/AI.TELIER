@@ -13,15 +13,15 @@ interface InspirationImage {
 }
 
 const images: InspirationImage[] = [
-  { id: 1, src: "/images/fashion-1.jpg", alt: "Avant-garde black runway look", height: "tall", folder: "Runway AW26" },
-  { id: 2, src: "/images/fashion-2.jpg", alt: "Cream trench coat street style", height: "medium", folder: "Street Style" },
-  { id: 3, src: "/images/fashion-3.jpg", alt: "Burgundy silk fabric texture", height: "short", folder: "Fabric Textures" },
-  { id: 4, src: "/images/fashion-4.jpg", alt: "Luxury accessories still life", height: "medium" },
-  { id: 5, src: "/images/fashion-5.jpg", alt: "White haute couture gown", height: "tall", folder: "Runway AW26" },
-  { id: 6, src: "/images/fashion-6.jpg", alt: "Earth tone fabric swatches", height: "short", folder: "Color Palette" },
-  { id: 7, src: "/images/fashion-7.jpg", alt: "Geometric patterned tailored suit", height: "medium", folder: "Runway AW26" },
-  { id: 8, src: "/images/fashion-8.jpg", alt: "Cable knit textile detail", height: "short", folder: "Fabric Textures" },
-  { id: 9, src: "/images/fashion-9.jpg", alt: "Deconstructed blazer street style", height: "tall", folder: "Street Style" },
+  { id: 1, src: "https://picsum.photos/seed/fashion1/400/600", alt: "Avant-garde black runway look", height: "tall", folder: "Runway AW26" },
+  { id: 2, src: "https://picsum.photos/seed/fashion2/400/400", alt: "Cream trench coat street style", height: "medium", folder: "Street Style" },
+  { id: 3, src: "https://picsum.photos/seed/fashion3/400/300", alt: "Burgundy silk fabric texture", height: "short", folder: "Fabric Textures" },
+  { id: 4, src: "https://picsum.photos/seed/fashion4/400/400", alt: "Luxury accessories still life", height: "medium" },
+  { id: 5, src: "https://picsum.photos/seed/fashion5/400/600", alt: "White haute couture gown", height: "tall", folder: "Runway AW26" },
+  { id: 6, src: "https://picsum.photos/seed/fashion6/400/300", alt: "Earth tone fabric swatches", height: "short", folder: "Color Palette" },
+  { id: 7, src: "https://picsum.photos/seed/fashion7/400/400", alt: "Geometric patterned tailored suit", height: "medium", folder: "Runway AW26" },
+  { id: 8, src: "https://picsum.photos/seed/fashion8/400/300", alt: "Cable knit textile detail", height: "short", folder: "Fabric Textures" },
+  { id: 9, src: "https://picsum.photos/seed/fashion9/400/600", alt: "Deconstructed blazer street style", height: "tall", folder: "Street Style" },
 ]
 
 const heightMap = {
