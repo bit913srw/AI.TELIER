@@ -1,18 +1,20 @@
 "use client"
 
 import { useState } from "react"
+import { useRouter } from "next/navigation"
 
 interface SignInFormProps {
   onSwitchTab: () => void
 }
 
 export function SignInForm({ onSwitchTab }: SignInFormProps) {
+  const router = useRouter()
   const [email, setEmail] = useState("")
   const [password, setPassword] = useState("")
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
-    // Handle sign in logic
+    router.push("/dashboard")
   }
 
   return (
