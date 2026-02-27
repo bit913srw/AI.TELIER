@@ -14,7 +14,7 @@ export function StepHeader({ currentStep, totalSteps, onBack }: StepHeaderProps)
       <button
         onClick={onBack}
         className="flex items-center gap-1.5 font-mono text-xs tracking-[0.2em] uppercase text-foreground hover:opacity-70 transition-opacity"
-        aria-label="Back to Studio"
+        aria-label="Back to Studio" onClick={() => window.location.href="/dashboard"}
       >
         <ArrowLeft className="h-3.5 w-3.5" />
         <span>Studio</span>
