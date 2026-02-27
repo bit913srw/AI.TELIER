@@ -1,3 +1,6 @@
+"use client"
+import Link from "next/link"
+
 export default function Home() {
   return (
     <main className="relative flex min-h-svh flex-col items-center justify-center bg-background text-foreground">
@@ -18,7 +21,7 @@ export default function Home() {
       {/* Center content */}
       <div className="flex flex-col items-center gap-0">
         {/* Masthead */}
-        <h1 className="font-serif text-[clamp(4rem,15vw,12rem)] font-black leading-none tracking-tight text-foreground">
+        <Link href="/signin"><h1 className="font-serif text-[clamp(4rem,15vw,12rem)] font-black leading-none tracking-tight text-foreground cursor-pointer">
           AI.TELIER
         </h1>
 
@@ -36,12 +39,7 @@ export default function Home() {
         </p>
       </div>
 
-      {/* Bottom button */}
-      <div className="absolute bottom-12">
-        <button className="cursor-pointer border border-foreground bg-transparent px-10 py-3 text-[11px] font-light tracking-[0.3em] text-foreground transition-colors duration-300 hover:bg-foreground hover:text-background">
-          BEGIN CREATING
-        </button>
-      </div>
+      
     </main>
   );
 }
