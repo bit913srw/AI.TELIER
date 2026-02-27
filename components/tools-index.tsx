@@ -4,19 +4,19 @@ const items = [
   {
     name: "INSPIRATION",
     description: "Your editorial image library",
-    href: "/tools/inspiration",
+    href: "/inspo",
     offsetY: 30,
   },
   {
     name: "MEASUREMENTS",
     description: "Log body profiles for AI",
-    href: "/tools/measurements",
+    href: "/measurements",
     offsetY: -110,
   },
   {
     name: "WORKING IDEAS",
     description: "Your design notebook",
-    href: "/tools/ideas",
+    href: "/workingideas",
     offsetY: 20,
   },
 ]
