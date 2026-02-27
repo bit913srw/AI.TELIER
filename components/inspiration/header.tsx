@@ -8,7 +8,7 @@ export function InspirationHeader() {
       <div className="flex w-full items-center justify-between">
         <button
           className="flex items-center gap-1.5 text-primary font-sans text-xs tracking-[0.2em] uppercase hover:opacity-70 transition-opacity"
-          aria-label="Go back to tools"
+          aria-label="Go back to tools" onClick={() => window.location.href="/tools"}
         >
           <ArrowLeft className="h-3.5 w-3.5" />
           <span>Tools</span>

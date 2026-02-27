@@ -45,7 +45,7 @@ export function MeasurementsScreen() {
       {/* Top-left: Tools */}
       <button
         className="fixed top-6 left-6 z-10 flex items-center gap-2 text-deep-red text-base tracking-[0.15em] uppercase font-mono hover:text-deep-red/80 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-deep-red rounded-sm"
-        aria-label="Back to tools"
+        aria-label="Back to tools" onClick={() => window.location.href="/tools"}
       >
         <ArrowLeft className="w-5 h-5" />
         Tools

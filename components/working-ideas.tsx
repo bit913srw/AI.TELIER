@@ -117,7 +117,7 @@ export function WorkingIdeas() {
         <div className="flex items-center justify-between">
           <button
             className="flex items-center gap-1.5 text-primary font-sans text-xs uppercase tracking-[0.2em] hover:opacity-70 transition-opacity"
-            aria-label="Go back to tools"
+            aria-label="Go back to tools" onClick={() => window.location.href="/tools"}
           >
             <ArrowLeft className="w-3.5 h-3.5" strokeWidth={1.5} />
             <span>Tools</span>
