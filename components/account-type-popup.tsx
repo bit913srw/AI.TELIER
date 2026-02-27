@@ -1,6 +1,7 @@
 "use client"
 
 import { useEffect, useRef } from "react"
+import { useRouter } from "next/navigation"
 
 interface AccountTypePopupProps {
   onClose: () => void
@@ -8,6 +9,7 @@ interface AccountTypePopupProps {
 
 export function AccountTypePopup({ onClose }: AccountTypePopupProps) {
   const overlayRef = useRef<HTMLDivElement>(null)
+  const router = useRouter()
 
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
@@ -22,9 +24,8 @@ export function AccountTypePopup({ onClose }: AccountTypePopupProps) {
   }
 
   const handleSelect = (type: "passion" | "business") => {
-    // Handle account type selection
-    console.log(`Selected: ${type}`)
-    onClose()
+    // Navigate to dashboard after selecting account type
+    router.push("/dashboard")
   }
 
   return (
