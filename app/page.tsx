@@ -21,9 +21,11 @@ export default function Home() {
       {/* Center content */}
       <div className="flex flex-col items-center gap-0">
         {/* Masthead */}
-        <h1 className="font-serif text-[clamp(4rem,15vw,12rem)] font-black leading-none tracking-tight text-foreground">
-          AI.TELIER
-        </h1>
+        <Link href="/signin" className="transition-opacity duration-300 hover:opacity-70">
+          <h1 className="font-serif text-[clamp(4rem,15vw,12rem)] font-black leading-none tracking-tight text-foreground">
+            AI.TELIER
+          </h1>
+        </Link>
 
         {/* "by design" — centered between mid-E and mid-R of AI.TELIER (~72% from left) */}
         <p
@@ -32,15 +34,13 @@ export default function Home() {
         >
           by design
         </p>
-
-        {/* Tagline */}
-        <p className="mt-6 text-[10px] font-light tracking-[0.35em] text-[#8B1A1A]">
-          {"AI POWERED FASHION PATTERNS \u00B7 PRECISION CRAFTED FOR YOU"}
-        </p>
       </div>
 
-            <div className="absolute bottom-8">
-        <Link href="/signin" className="cursor-pointer border border-foreground bg-transparent px-10 py-3 text-[11px] font-light tracking-[0.3em] text-foreground transition-colors duration-300 hover:bg-foreground hover:text-background">BEGIN CREATING</Link>
+      {/* Tagline at bottom */}
+      <div className="absolute bottom-8">
+        <p className="text-[10px] font-light tracking-[0.35em] text-[#8B1A1A]">
+          {"AI POWERED FASHION PATTERNS \u00B7 PRECISION CRAFTED FOR YOU"}
+        </p>
       </div>
     </main>
   );
