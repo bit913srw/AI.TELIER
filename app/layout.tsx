@@ -1,24 +1,32 @@
-import type { Metadata } from 'next'
-import { Playfair_Display, Cormorant_Garamond } from 'next/font/google'
+import type { Metadata, Viewport } from 'next'
+import { Playfair_Display, Courier_Prime, Pinyon_Script } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
 import './globals.css'
 
-const _playfair = Playfair_Display({
-  subsets: ["latin"],
-  variable: "--font-serif",
-  weight: ["400", "700", "900"],
-});
-const _cormorant = Cormorant_Garamond({
-  subsets: ["latin"],
-  variable: "--font-sans",
-  weight: ["300", "400", "600"],
-  style: ["normal", "italic"],
-});
+const playfairDisplay = Playfair_Display({
+  subsets: ['latin'],
+  variable: '--font-playfair',
+  display: 'swap',
+})
+
+const courierPrime = Courier_Prime({
+  subsets: ['latin'],
+  weight: ['400', '700'],
+  style: ['normal', 'italic'],
+  variable: '--font-courier-prime',
+  display: 'swap',
+})
+
+const pinyonScript = Pinyon_Script({
+  subsets: ['latin'],
+  weight: '400',
+  variable: '--font-pinyon',
+  display: 'swap',
+})
 
 export const metadata: Metadata = {
-  title: 'AI.TELIER - Fashion Pattern Studio',
-  description: 'AI Powered Fashion Patterns, Precision Crafted For You',
-  generator: 'v0.app',
+  title: 'AI.TELIER Studio',
+  description: 'AI Pattern Generation - Luxury Fashion Design Studio',
   icons: {
     icon: [
       {
@@ -38,14 +46,18 @@ export const metadata: Metadata = {
   },
 }
 
+export const viewport: Viewport = {
+  themeColor: '#F0EDE8',
+}
+
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en">
-      <body className={`${_playfair.variable} ${_cormorant.variable} font-sans antialiased`}>
+    <html lang="en" className={`${playfairDisplay.variable} ${courierPrime.variable} ${pinyonScript.variable}`}>
+      <body className="font-sans antialiased">
         {children}
         <Analytics />
       </body>
