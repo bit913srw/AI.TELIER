@@ -4,19 +4,18 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  /* Design tokens: eggshell background, deep red primary/text */
   --background: #F0EDE8;
-  --foreground: #8B1A1A;
+  --foreground: #2A2A2A;
   --card: #F0EDE8;
-  --card-foreground: #8B1A1A;
+  --card-foreground: #2A2A2A;
   --popover: #F0EDE8;
-  --popover-foreground: #8B1A1A;
+  --popover-foreground: #2A2A2A;
   --primary: #8B1A1A;
   --primary-foreground: #F0EDE8;
   --secondary: #E8E4DD;
-  --secondary-foreground: #8B1A1A;
+  --secondary-foreground: #2A2A2A;
   --muted: #E8E4DD;
-  --muted-foreground: #8B1A1A;
+  --muted-foreground: #8A8580;
   --accent: #8B1A1A;
   --accent-foreground: #F0EDE8;
   --destructive: #8B1A1A;
@@ -28,11 +27,9 @@
 }
 
 @theme inline {
-  /* Font heading: Playfair Display | Font body: Courier Prime */
   --font-sans: var(--font-courier-prime), 'Courier New', monospace;
   --font-serif: var(--font-playfair), Georgia, serif;
   --font-mono: var(--font-courier-prime), 'Courier New', monospace;
-  --font-script: var(--font-pinyon), 'Brush Script MT', cursive;
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-card: var(--card);
@@ -63,9 +60,6 @@
     @apply border-border outline-ring/50;
   }
   body {
-    @apply bg-background text-foreground font-sans;
-  }
-  h1, h2, h3, h4, h5, h6 {
-    font-family: var(--font-playfair), Georgia, serif;
+    @apply bg-background text-foreground;
   }
 }

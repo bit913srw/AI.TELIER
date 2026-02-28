@@ -53,7 +53,7 @@ function GarmentViewer({
     <div className="flex flex-col flex-1 items-center justify-center">
       <div className="w-full max-w-lg">
         {/* Garment Image */}
-        <div className="relative aspect-[3/4] bg-card border border-border overflow-hidden">
+        <div className="relative aspect-[3/4] bg-[#F5F3EF] border border-border overflow-hidden">
           <img
             src="/images/garment-mannequin.jpg"
             alt={`AI generated ${garmentType} design on cloth mannequin`}
@@ -65,7 +65,12 @@ function GarmentViewer({
             className="absolute left-4 right-4 top-1/2 -translate-y-1/2 flex items-center justify-center"
             style={{ transform: 'translateY(-50%) rotate(-2deg)' }}
           >
-            <div className="px-6 py-3 bg-muted/90 max-w-[90%] shadow-md">
+            <div 
+              className="px-6 py-3 bg-[#F5F2EB]/90 max-w-[90%]"
+              style={{ 
+                boxShadow: '0 2px 8px rgba(0,0,0,0.1), 0 1px 3px rgba(0,0,0,0.08)',
+              }}
+            >
               <p className="font-mono text-[10px] tracking-[0.15em] uppercase text-foreground text-center leading-relaxed">
                 Will Be 3D Rendered Design. User Will Be Able To Drag Toggle To Explore All Angles
               </p>

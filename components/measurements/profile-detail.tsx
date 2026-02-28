@@ -39,7 +39,7 @@ export function ProfileDetail({ profileName, onBack }: ProfileDetailProps) {
       <header className="flex items-center justify-between px-6 pt-6 pb-4">
         <button
           onClick={onBack}
-          className="flex items-center gap-1.5 text-primary text-xs tracking-[0.15em] uppercase font-mono hover:text-primary/80 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded-sm"
+          className="flex items-center gap-1.5 text-deep-red text-xs tracking-[0.15em] uppercase font-mono hover:text-deep-red/80 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-deep-red rounded-sm"
           aria-label="Back to profiles"
         >
           <ArrowLeft className="w-3.5 h-3.5" />
@@ -47,15 +47,15 @@ export function ProfileDetail({ profileName, onBack }: ProfileDetailProps) {
         </button>
 
         {/* Unit toggle */}
-        <div className="flex items-center gap-0 border border-foreground/20 rounded-sm overflow-hidden" role="radiogroup" aria-label="Measurement unit">
+        <div className="flex items-center gap-0 border border-[#2A2218]/20 rounded-sm overflow-hidden" role="radiogroup" aria-label="Measurement unit">
           <button
             role="radio"
             aria-checked={unit === "IN"}
             onClick={() => setUnit("IN")}
             className={`px-3 py-1 text-xs tracking-[0.1em] font-mono transition-colors ${
               unit === "IN"
-                ? "bg-primary text-primary-foreground"
-                : "bg-transparent text-foreground/50 hover:text-foreground/80"
+                ? "bg-deep-red text-cream"
+                : "bg-transparent text-[#2A2218]/50 hover:text-[#2A2218]/80"
             }`}
           >
             IN
@@ -66,8 +66,8 @@ export function ProfileDetail({ profileName, onBack }: ProfileDetailProps) {
             onClick={() => setUnit("CM")}
             className={`px-3 py-1 text-xs tracking-[0.1em] font-mono transition-colors ${
               unit === "CM"
-                ? "bg-primary text-primary-foreground"
-                : "bg-transparent text-foreground/50 hover:text-foreground/80"
+                ? "bg-deep-red text-cream"
+                : "bg-transparent text-[#2A2218]/50 hover:text-[#2A2218]/80"
             }`}
           >
             CM
@@ -77,10 +77,10 @@ export function ProfileDetail({ profileName, onBack }: ProfileDetailProps) {
 
       {/* Title */}
       <div className="px-6 pb-6 pt-2">
-        <h1 className="font-serif text-2xl text-foreground tracking-wide text-center text-balance">
+        <h1 className="font-serif text-2xl text-[#2A2218] tracking-wide text-center text-balance">
           {profileName}
         </h1>
-        <div className="mt-3 mx-auto w-16 h-px bg-primary" />
+        <div className="mt-3 mx-auto w-16 h-px bg-deep-red" />
       </div>
 
       {/* Measurement fields */}
@@ -90,7 +90,7 @@ export function ProfileDetail({ profileName, onBack }: ProfileDetailProps) {
             <div key={field} className="flex flex-col gap-1.5">
               <label
                 htmlFor={`field-${field}`}
-                className="text-foreground/60 text-[11px] tracking-[0.15em] uppercase font-mono"
+                className="text-[#2A2218]/60 text-[11px] tracking-[0.15em] uppercase font-mono"
               >
                 {field}
               </label>
@@ -101,7 +101,7 @@ export function ProfileDetail({ profileName, onBack }: ProfileDetailProps) {
                 value={values[field]}
                 onChange={(e) => handleChange(field, e.target.value)}
                 placeholder="--"
-                className="bg-transparent border-b border-foreground/20 rounded-none px-1 py-2.5 text-foreground font-mono text-sm placeholder:text-foreground/30 focus:outline-none focus:border-primary transition-colors"
+                className="bg-transparent border-b border-[#2A2218]/20 rounded-none px-1 py-2.5 text-[#2A2218] font-mono text-sm placeholder:text-[#2A2218]/30 focus:outline-none focus:border-deep-red transition-colors"
               />
             </div>
           ))}
@@ -111,7 +111,7 @@ export function ProfileDetail({ profileName, onBack }: ProfileDetailProps) {
       {/* Save button */}
       <div className="px-6 pb-8 pt-2">
         <button
-          className="w-full bg-primary text-primary-foreground font-mono text-sm tracking-[0.2em] uppercase py-3.5 rounded-sm hover:bg-primary/90 active:bg-primary/80 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/40 focus-visible:ring-offset-2"
+          className="w-full bg-deep-red text-cream font-mono text-sm tracking-[0.2em] uppercase py-3.5 rounded-sm hover:bg-deep-red/90 active:bg-deep-red/80 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-deep-red/40 focus-visible:ring-offset-2"
         >
           Save
         </button>

@@ -24,6 +24,7 @@ export function AccountTypePopup({ onClose }: AccountTypePopupProps) {
   }
 
   const handleSelect = (type: "passion" | "business") => {
+    // Navigate to dashboard after selecting account type
     router.push("/dashboard")
   }
 
@@ -31,16 +32,24 @@ export function AccountTypePopup({ onClose }: AccountTypePopupProps) {
     <div
       ref={overlayRef}
       onClick={handleOverlayClick}
-      className="fixed inset-0 z-50 flex items-center justify-center px-4 animate-in fade-in duration-200 bg-foreground/50 backdrop-blur-sm"
+      className="fixed inset-0 z-50 flex items-center justify-center px-4 animate-in fade-in duration-200"
+      style={{ backgroundColor: "rgba(42,42,42,0.5)", backdropFilter: "blur(4px)" }}
       role="dialog"
       aria-modal="true"
       aria-label="Choose account type"
     >
-      <div className="relative w-full max-w-[440px] rounded-sm p-8 sm:p-10 animate-in zoom-in-95 duration-200 bg-background border-2 border-primary">
+      <div
+        className="relative w-full max-w-[440px] rounded-sm p-8 sm:p-10 animate-in zoom-in-95 duration-200"
+        style={{
+          backgroundColor: "#F0EDE8",
+          border: "2px solid #8B1A1A",
+        }}
+      >
         {/* Close button */}
         <button
           onClick={onClose}
-          className="absolute top-4 right-4 p-1 transition-opacity hover:opacity-60 text-primary"
+          className="absolute top-4 right-4 p-1 transition-opacity hover:opacity-60"
+          style={{ color: "#8B1A1A" }}
           aria-label="Close dialog"
         >
           <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.5">
@@ -48,7 +57,10 @@ export function AccountTypePopup({ onClose }: AccountTypePopupProps) {
           </svg>
         </button>
 
-        <h2 className="font-serif text-xl text-center mb-8 tracking-wide text-primary">
+        <h2
+          className="font-serif text-xl text-center mb-8 tracking-wide"
+          style={{ color: "#8B1A1A" }}
+        >
           What type of creator are you?
         </h2>
 
@@ -56,12 +68,42 @@ export function AccountTypePopup({ onClose }: AccountTypePopupProps) {
           {/* Passion Card */}
           <button
             onClick={() => handleSelect("passion")}
-            className="group flex flex-col items-start p-6 rounded-sm text-left transition-all hover:shadow-md border-[1.5px] border-primary bg-transparent hover:bg-primary"
+            className="group flex flex-col items-start p-6 rounded-sm text-left transition-all hover:shadow-md"
+            style={{
+              border: "1.5px solid #8B1A1A",
+              backgroundColor: "transparent",
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.backgroundColor = "#8B1A1A"
+              e.currentTarget.querySelectorAll<HTMLElement>("[data-title]").forEach(
+                (el) => (el.style.color = "#F0EDE8")
+              )
+              e.currentTarget.querySelectorAll<HTMLElement>("[data-desc]").forEach(
+                (el) => (el.style.color = "rgba(240,237,232,0.7)")
+              )
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.backgroundColor = "transparent"
+              e.currentTarget.querySelectorAll<HTMLElement>("[data-title]").forEach(
+                (el) => (el.style.color = "#8B1A1A")
+              )
+              e.currentTarget.querySelectorAll<HTMLElement>("[data-desc]").forEach(
+                (el) => (el.style.color = "#6B6560")
+              )
+            }}
           >
-            <span className="text-xs tracking-[0.25em] uppercase font-semibold transition-colors text-primary group-hover:text-primary-foreground">
+            <span
+              data-title=""
+              className="text-xs tracking-[0.25em] uppercase font-semibold transition-colors"
+              style={{ color: "#8B1A1A" }}
+            >
               Passion
             </span>
-            <span className="text-sm mt-1.5 transition-colors text-foreground/70 group-hover:text-primary-foreground/70">
+            <span
+              data-desc=""
+              className="text-sm mt-1.5 transition-colors"
+              style={{ color: "#6B6560" }}
+            >
               For personal creative projects
             </span>
           </button>
@@ -69,12 +111,42 @@ export function AccountTypePopup({ onClose }: AccountTypePopupProps) {
           {/* Business Card */}
           <button
             onClick={() => handleSelect("business")}
-            className="group flex flex-col items-start p-6 rounded-sm text-left transition-all hover:shadow-md border-[1.5px] border-primary bg-transparent hover:bg-primary"
+            className="group flex flex-col items-start p-6 rounded-sm text-left transition-all hover:shadow-md"
+            style={{
+              border: "1.5px solid #8B1A1A",
+              backgroundColor: "transparent",
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.backgroundColor = "#8B1A1A"
+              e.currentTarget.querySelectorAll<HTMLElement>("[data-title]").forEach(
+                (el) => (el.style.color = "#F0EDE8")
+              )
+              e.currentTarget.querySelectorAll<HTMLElement>("[data-desc]").forEach(
+                (el) => (el.style.color = "rgba(240,237,232,0.7)")
+              )
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.backgroundColor = "transparent"
+              e.currentTarget.querySelectorAll<HTMLElement>("[data-title]").forEach(
+                (el) => (el.style.color = "#8B1A1A")
+              )
+              e.currentTarget.querySelectorAll<HTMLElement>("[data-desc]").forEach(
+                (el) => (el.style.color = "#6B6560")
+              )
+            }}
           >
-            <span className="text-xs tracking-[0.25em] uppercase font-semibold transition-colors text-primary group-hover:text-primary-foreground">
+            <span
+              data-title=""
+              className="text-xs tracking-[0.25em] uppercase font-semibold transition-colors"
+              style={{ color: "#8B1A1A" }}
+            >
               Business
             </span>
-            <span className="text-sm mt-1.5 transition-colors text-foreground/70 group-hover:text-primary-foreground/70">
+            <span
+              data-desc=""
+              className="text-sm mt-1.5 transition-colors"
+              style={{ color: "#6B6560" }}
+            >
               For professional & commercial use
             </span>
           </button>

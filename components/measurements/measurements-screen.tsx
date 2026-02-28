@@ -44,7 +44,7 @@ export function MeasurementsScreen() {
     <div className="relative flex flex-col min-h-screen">
       {/* Top-left: Tools */}
       <button
-        className="fixed top-6 left-6 z-10 flex items-center gap-2 text-primary text-base tracking-[0.15em] uppercase font-mono hover:text-primary/80 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded-sm"
+        className="fixed top-6 left-6 z-10 flex items-center gap-2 text-deep-red text-base tracking-[0.15em] uppercase font-mono hover:text-deep-red/80 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-deep-red rounded-sm"
         aria-label="Back to tools"
       >
         <ArrowLeft className="w-5 h-5" />
@@ -54,17 +54,17 @@ export function MeasurementsScreen() {
       {/* Top-right: Add New + */}
       <button
         onClick={handleAddProfile}
-        className="fixed top-6 right-6 z-10 text-primary text-base tracking-[0.15em] uppercase font-mono hover:text-primary/80 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded-sm"
+        className="fixed top-6 right-6 z-10 text-deep-red text-base tracking-[0.15em] uppercase font-mono hover:text-deep-red/80 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-deep-red rounded-sm"
       >
         Add New +
       </button>
 
       {/* Title - below Tools/Add New */}
       <div className="px-6 pt-20 pb-2">
-        <h1 className="font-serif text-2xl text-foreground tracking-wide text-center text-balance leading-relaxed">
+        <h1 className="font-serif text-2xl text-[#2A2218] tracking-wide text-center text-balance leading-relaxed">
           Measurements
         </h1>
-        <div className="mt-3 mx-auto w-16 h-px bg-primary" />
+        <div className="mt-3 mx-auto w-16 h-px bg-deep-red" />
       </div>
 
       {/* Profile list */}
@@ -80,7 +80,7 @@ export function MeasurementsScreen() {
       </div>
 
       {/* Bottom-left: Measurement Guide */}
-      <button className="fixed bottom-6 left-6 z-10 text-primary-foreground/80 text-sm tracking-[0.2em] uppercase font-mono hover:text-primary-foreground transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded-sm drop-shadow-sm">
+      <button className="fixed bottom-6 left-6 z-10 text-[#F5F0E8]/80 text-sm tracking-[0.2em] uppercase font-mono hover:text-[#F5F0E8] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-deep-red rounded-sm drop-shadow-sm">
         Measurement Guide
       </button>
     </div>
