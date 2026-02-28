@@ -26,7 +26,7 @@ export default function Home() {
           </h1>
         </Link>
         <p
-          className="mt-2 self-start whitespace-nowrap font-sans text-lg font-light italic tracking-[0.1em] text-foreground"
+          className="mt-2 self-start whitespace-nowrap font-script text-2xl tracking-normal text-foreground"
           style={{ marginLeft: "74%", transform: "translateX(-50%)" }}
         >
           by design{' '}
