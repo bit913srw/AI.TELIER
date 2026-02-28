@@ -16,7 +16,7 @@ export function AuthBook() {
       <div className="relative w-full max-w-[520px] mx-auto">
         {/* Book shadow */}
         <div
-          className="absolute inset-0 translate-y-3 translate-x-3 rounded-sm bg-[#2A2A2A]/20 blur-md"
+          className="absolute inset-0 translate-y-3 translate-x-3 rounded-sm bg-black/20 blur-md"
           aria-hidden="true"
         />
 

@@ -1,26 +1,21 @@
 import type { Metadata, Viewport } from 'next'
-import { Playfair_Display, Courier_Prime, Pinyon_Script } from 'next/font/google'
+import { Playfair_Display, Courier_Prime } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
 import './globals.css'
 
+/* Headings: Playfair Display */
 const playfairDisplay = Playfair_Display({
   subsets: ['latin'],
   variable: '--font-playfair',
   display: 'swap',
 })
 
+/* Body text: Courier Prime */
 const courierPrime = Courier_Prime({
   subsets: ['latin'],
   weight: ['400', '700'],
   style: ['normal', 'italic'],
   variable: '--font-courier-prime',
-  display: 'swap',
-})
-
-const pinyonScript = Pinyon_Script({
-  subsets: ['latin'],
-  weight: '400',
-  variable: '--font-pinyon',
   display: 'swap',
 })
 
@@ -56,7 +51,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning className={`${playfairDisplay.variable} ${courierPrime.variable} ${pinyonScript.variable}`}>
+    <html lang="en" suppressHydrationWarning className={`${playfairDisplay.variable} ${courierPrime.variable}`}>
       <body className="font-sans antialiased min-h-screen bg-background text-foreground">
         {children}
         <Analytics />
