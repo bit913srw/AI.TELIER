@@ -56,7 +56,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" className={`${playfairDisplay.variable} ${courierPrime.variable} ${pinyonScript.variable}`}>
+    <html lang="en" suppressHydrationWarning className={`${playfairDisplay.variable} ${courierPrime.variable} ${pinyonScript.variable}`}>
       <body className="font-sans antialiased">
         {children}
         <Analytics />

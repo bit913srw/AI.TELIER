@@ -6,11 +6,10 @@ import Link from "next/link"
 interface IndexRowProps {
   number: string
   title: string
-  description: string
   href: string
 }
 
-export function IndexRow({ number, title, description, href }: IndexRowProps) {
+export function IndexRow({ number, title, href }: IndexRowProps) {
   const [isHovered, setIsHovered] = useState(false)
 
   return (
@@ -30,7 +29,7 @@ export function IndexRow({ number, title, description, href }: IndexRowProps) {
         >
           {number}
         </span>
-        <div className="flex flex-col justify-center gap-1.5 pt-1 md:pt-2">
+        <div className="flex items-center pt-1 md:pt-2">
           <h2
             className="font-serif text-primary text-lg md:text-2xl lg:text-3xl font-bold uppercase tracking-wider transition-all duration-300"
             style={{
@@ -39,9 +38,6 @@ export function IndexRow({ number, title, description, href }: IndexRowProps) {
           >
             {title}
           </h2>
-          <p className="font-sans text-muted-foreground text-sm md:text-base italic leading-relaxed">
-            {description}
-          </p>
         </div>
       </div>
       <div
