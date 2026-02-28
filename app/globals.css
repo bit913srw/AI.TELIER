@@ -4,18 +4,19 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
+  /* Design tokens: eggshell background, deep red primary/text */
   --background: #F0EDE8;
-  --foreground: #2A2A2A;
+  --foreground: #8B1A1A;
   --card: #F0EDE8;
-  --card-foreground: #2A2A2A;
+  --card-foreground: #8B1A1A;
   --popover: #F0EDE8;
-  --popover-foreground: #2A2A2A;
+  --popover-foreground: #8B1A1A;
   --primary: #8B1A1A;
   --primary-foreground: #F0EDE8;
   --secondary: #E8E4DD;
-  --secondary-foreground: #2A2A2A;
+  --secondary-foreground: #8B1A1A;
   --muted: #E8E4DD;
-  --muted-foreground: #8A8580;
+  --muted-foreground: #8B1A1A;
   --accent: #8B1A1A;
   --accent-foreground: #F0EDE8;
   --destructive: #8B1A1A;
@@ -27,6 +28,7 @@
 }
 
 @theme inline {
+  /* Font heading: Playfair Display | Font body: Courier Prime */
   --font-sans: var(--font-courier-prime), 'Courier New', monospace;
   --font-serif: var(--font-playfair), Georgia, serif;
   --font-mono: var(--font-courier-prime), 'Courier New', monospace;
@@ -60,6 +62,9 @@
     @apply border-border outline-ring/50;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-sans;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-playfair), Georgia, serif;
   }
 }

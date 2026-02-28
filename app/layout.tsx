@@ -57,7 +57,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning className={`${playfairDisplay.variable} ${courierPrime.variable} ${pinyonScript.variable}`}>
-      <body className="font-sans antialiased">
+      <body className="font-sans antialiased min-h-screen bg-background text-foreground">
         {children}
         <Analytics />
       </body>

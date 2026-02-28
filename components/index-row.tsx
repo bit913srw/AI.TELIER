@@ -20,7 +20,7 @@ export function IndexRow({ number, title, href }: IndexRowProps) {
       onMouseLeave={() => setIsHovered(false)}
       prefetch={false}
     >
-      <div className="flex items-start gap-6 py-7 px-2 md:gap-10 md:py-9 transition-colors duration-300 hover:bg-[#E8E4DD]/50">
+      <div className="flex items-start gap-6 py-7 px-2 md:gap-10 md:py-9 transition-colors duration-300 hover:bg-secondary/50">
         <span
           className="font-serif text-primary text-4xl md:text-6xl lg:text-7xl font-bold leading-none select-none transition-transform duration-300 min-w-[3rem] md:min-w-[5rem]"
           style={{
@@ -41,12 +41,7 @@ export function IndexRow({ number, title, href }: IndexRowProps) {
         </div>
       </div>
       <div
-        className="h-px w-full transition-colors duration-300"
-        style={{
-          backgroundColor: isHovered
-            ? "var(--primary)"
-            : "rgba(139, 26, 26, 0.2)",
-        }}
+        className={`h-px w-full transition-colors duration-300 ${isHovered ? "bg-primary" : "bg-primary/20"}`}
       />
     </Link>
   )

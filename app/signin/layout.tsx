@@ -1,19 +1,21 @@
 import type { Metadata, Viewport } from 'next'
-import { Cormorant_Garamond, Lato } from 'next/font/google'
+import { Playfair_Display, Courier_Prime } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
 import './globals.css'
 
-const cormorant = Cormorant_Garamond({
-  subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700"],
-  variable: "--font-cormorant",
-});
+const playfairDisplay = Playfair_Display({
+  subsets: ['latin'],
+  variable: '--font-playfair',
+  display: 'swap',
+})
 
-const lato = Lato({
-  subsets: ["latin"],
-  weight: ["300", "400", "700"],
-  variable: "--font-lato",
-});
+const courierPrime = Courier_Prime({
+  subsets: ['latin'],
+  weight: ['400', '700'],
+  style: ['normal', 'italic'],
+  variable: '--font-courier-prime',
+  display: 'swap',
+})
 
 export const viewport: Viewport = {
   themeColor: '#F0EDE8',
@@ -48,8 +50,8 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" className={`${cormorant.variable} ${lato.variable}`}>
-      <body className="font-sans antialiased">
+    <html lang="en" className={`${playfairDisplay.variable} ${courierPrime.variable}`}>
+      <body className="font-sans antialiased min-h-screen bg-background text-foreground">
         {children}
         <Analytics />
       </body>

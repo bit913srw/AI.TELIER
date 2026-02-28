@@ -31,7 +31,7 @@ export default function Home() {
         >
           by design
         </p>
-        <p className="mt-6 text-[10px] font-light tracking-[0.35em] text-[#8B1A1A]">
+        <p className="mt-6 text-[10px] font-light tracking-[0.35em] text-primary">
           {"AI POWERED FASHION PATTERNS · PRECISION CRAFTED FOR YOU"}
         </p>
       </div>
