@@ -32,7 +32,7 @@ export default function Home() {
           className="mt-2 self-start whitespace-nowrap font-script text-2xl tracking-normal text-foreground"
           style={{ marginLeft: '74%', transform: 'translateX(-50%)' }}
         >
-          by design
+          by design{' '}
         </p>
       </div>
 
